@@ -5,20 +5,31 @@
     <title>SLIIT</title>
 </head>
 <body>
-<script>
+<script type="text/javascript">
    // function printHello() {
    //     console.log("Hello world");
     //}
    // printHello();
 
+   //var printHello = function () {
+     //  console.log("Hello World");
+   //}
+  // function printer(func) {
+   //    func();
+
+  // }
+
+  // printer(printHello);
    var printHello = function () {
-       console.log("Hello World");
+       return function () {
+           console.log("Hello World");
+       }
    }
    function printer(func) {
-       func();
+       var excute = func();
+       excute();
 
    }
-
    printer(printHello);
 </script>
 </body>
