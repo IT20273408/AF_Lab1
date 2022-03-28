@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 3</title>
+</head>
+<body>
+<script type="text/javascript">
+    var vehicleName = 'Toyota';
+    function printVehicleName() {
+        console.log(this.vehicleName);
+    }
+    var car = {
+        vehicleName = 'Nissan',
+        printName: function(){
+            return function(){
+                console.log(this.vehicleName);
+
+            };
+        }
+    }
+    printVehicleName( );
+    var excute = car.printName();
+    excute - excute.bind(car);
+    exeute();
+
+</script>
+
+</body>
+</html>
